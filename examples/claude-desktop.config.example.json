@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "afad-earthquake": {
+      "command": "/usr/local/bin/node",
+      "args": [
+        "/Users/gorkemparadise/Desktop/earthquake-mcp/dist/index.js"
+      ]
+    }
+  }
+}

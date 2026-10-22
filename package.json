@@ -1,0 +1,36 @@
+{
+  "name": "afad-earthquake-mcp",
+  "version": "0.1.0",
+  "description": "AFAD canlı deprem verilerini MCP araçlarıyla sunan yerel stdio sunucusu",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "afad-earthquake-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "build": "node scripts/clean.ts && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "start": "node dist/index.js",
+    "smoke:live": "node scripts/live-smoke.ts",
+    "check": "npm run typecheck && npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@types/node": "24.19.2",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  }
+}
